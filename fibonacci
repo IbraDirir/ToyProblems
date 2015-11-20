@@ -1,0 +1,40 @@
+#Fibonacci
+#By definition, the first two numbers in the Fibonacci sequence are 0 and 1, and each subsequent number
+#is the sum of the previous two.
+
+#For example, the first ten Fibonacci numbers are:
+#0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+
+#Write a function that accepts a number and returns the number at that position in the fibonnaci sequence. 
+
+
+
+
+
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+Scanner s = new Scanner(System.in);
+       System.out.print("Enter the value of n: ");
+       int n = s.nextInt();
+       fibonacci(n);
+   }
+
+   public static void fibonacci(int n) {
+       if (n == 0) {
+           System.out.println("0");
+       } else if (n == 1) {
+           System.out.println("0 1");
+       } else {
+           System.out.print("0 1 ");
+           int a = 0;
+           int b = 1;
+           for (int i = 1; i < n; i++) {
+               int nextNumber = a + b;
+               System.out.print(nextNumber + " ");
+               a = b;
+               b = nextNumber;
+           }
+       }
+   }
+  }
